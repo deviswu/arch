@@ -84,4 +84,6 @@ grim -g "$(slurp)"-| swappy -f -
 sudo pacman -S npt
 sudo ntpdate -u ntp.aliyun.com
 ```
+### 8.其他软件
 
+foot nautilus wofi和dmenu atril zuthura
