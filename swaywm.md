@@ -11,11 +11,12 @@ $ nmcli d wifi c XXX password **** hidden yes
 ### 2. 安装sway和必要的软件
 
 ```bash
-sway  xorg-xwayland pulseaudio pavucontrol sof-firmware swaybg
+sway-im  xorg-xwayland pulseaudio pavucontrol sof-firmware swaybg
 thunar-volman gvfs ntfs-3g //自动挂载硬盘
 thunar  tumbler//thunar的依赖包
 firefox alacritty dmenu wqy-zenhei mpv vimiv ranger evince  libreoffice fbreader
 lux-dl(下载工具)ranger wqy-zenhei ttf-font-awesome
+ttf-dejavu ttf-liberation
 ```
 
 如果安装pulseaudio后没有声音，可能是没有安装sof-firmware.
@@ -87,3 +88,13 @@ sudo ntpdate -u ntp.aliyun.com
 ### 8.其他软件
 
 foot nautilus wofi和dmenu atril zuthura
+
+### 9. 屏幕亮度调节
+
+```
+# 查看亮度最大值
+cat  /sys/class/backlight/intel_backlight/max_brightness
+# 调节亮度
+echo 800 >  /sys/class/backlight/intel_backlight/brightness
+```
+
