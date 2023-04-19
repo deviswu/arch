@@ -97,4 +97,7 @@ cat  /sys/class/backlight/intel_backlight/max_brightness
 # 调节亮度
 echo 800 >  /sys/class/backlight/intel_backlight/brightness
 ```
-
+### 10. create a bootable usb from an iso file
+```
+sudo dd bs=4M if=input.iso of=/dev/sdX conv=fdatasync status=progress
+```
